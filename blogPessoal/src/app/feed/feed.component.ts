@@ -20,6 +20,7 @@ postagem: postagem = new postagem
 
   ngOnInit(): void {
     this.findAllPostagens()
+    window.scroll(0,0)
   }
 
 findAllPostagens(){
