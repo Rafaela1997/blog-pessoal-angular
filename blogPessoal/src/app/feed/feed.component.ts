@@ -18,6 +18,8 @@ listaPostagens:postagem[]
 postagem: postagem = new postagem
 alerta:boolean = false
 
+titulo:string
+
 
   constructor(private postagemService:PostagemService) { }
 
@@ -48,5 +50,10 @@ publicar(){
     this.postagem = resp
    location.assign('/feed')
   })
+}pesquisarPorTitulo(){
+  this.postagemService.findByTitulo(this.titulo).subscribe((resp:postagem[])=>{
+    this.listaPostagens = resp
+  })
 }
+
 }

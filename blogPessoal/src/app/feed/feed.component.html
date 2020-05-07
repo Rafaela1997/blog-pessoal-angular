@@ -19,8 +19,8 @@
                         target="_blank">github</a>
                     <hr class="mt-4 mb-4">
                     <h6 class="mb-3 text-monospace text-center">Pesquisar por titulo</h6>
-                    <input type="text" class="form-control mb-3 w-100" placeholder="pesquisar postagem">
-                    <button class="btn btn-outline-warning w-100" type="button">Pesquisa</button>
+                    <input type="text" class="form-control mb-3 w-100" placeholder="pesquisar postagem"[(ngModel)]="titulo">
+                    <button class="btn btn-outline-warning w-100" type="button" (click)=pesquisarPorTitulo()>Pesquisa</button>
                 </div>
             </div>
         </div>
