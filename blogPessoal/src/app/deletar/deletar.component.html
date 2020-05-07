@@ -1,0 +1,91 @@
+<div class="container">
+
+    <div class="row mt-5 mb-5">
+        <div class="col-md4">
+
+            <div class="card border-0" style="width: 18rem;">
+                <div class="d-flex justify-content-center mt-2">
+                    <img class="card-img-top rounded-circle w-75  "
+                        src="https://avatars0.githubusercontent.com/u/42123140?s=460&u=b430bfa2a2085bdfc48d44a3ecee8936d993a351&v=4"
+                        alt="Card image cap">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center">Rafaela Ramos Santana</h5>
+                    <p class="card-text">sou estudante da generation brasil, um bootcamp que forma desenvolvedores java
+                        em 12 semanas, além disso tenho conhecimento em javascript, nodejs, html, css e mongodb </p>
+                    <a href="https://www.linkedin.com/in/rafaela-ramos-santana/"
+                        class="btn btn-outline-info d-flex justify-content-center mb-3" target="_blank">linkedin</a>
+                    <a href="https://github.com/Rafaela1997" class="btn btn-outline-dark d-flex justify-content-center"
+                        target="_blank">github</a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+
+            <div>
+                <h3 class="text-center mb-4 text-monospace ">Deletar postagem</h3>
+            </div>
+            <h3 class="text-monospace text-center">Minhas postagens</h3>
+
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="card-title">{{postagem.titulo}}</h5>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <p class="card-text">{{postagem.texto}}</p>
+                <small class="form-text m-0 text-muted mb-3 text-monospace">
+                    Postado em {{postagem.data | date:'dd/MM/yyyy'}} às {{postagem.data | date: 'hh:mm'}}
+                </small>
+
+            </div>
+            <div class="container">
+
+                <div class="row mt-5 mb-5">
+                   
+
+                    <div class="col-md-8">
+
+                        <hr class="mt-5 mb-5">
+
+
+                        <div class="card mb-4">
+                            <div class=
+
+                            <div class="card-body">
+                                <p class="card-text">{{postagem.texto}}</p>
+                                <small class="form-text m-0 text-muted mb-3 text-monospace">
+                                    Postado em {{postagem.data | date:'dd/MM/yyyy'}} às
+                                    {{postagem.data | date: 'hh:mm'}}
+                                </small>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <hr class="mt-5 mb-5">
+
+        <div class="row">
+            <div class="col-md-12">
+                <h5 class="text-monospace text-center mb-5">Tem certeza disso?</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 d-flex justify-content-center">
+                <button class="btn btn-outline-danger mr-3" (click)="btnSim()">Sim</button>
+                <button class="btn btn-outline-success" (click)="btnNao()">Não</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PostagemService } from '../service/postagem.service';
 import { postagem } from '../model/postagem';
+import { Local } from 'protractor/built/driverProviders';
 
 
 @Component({
@@ -15,12 +16,26 @@ export class FeedComponent implements OnInit {
 
 listaPostagens:postagem[]
 postagem: postagem = new postagem
+alerta:boolean = false
+
 
   constructor(private postagemService:PostagemService) { }
 
   ngOnInit(): void {
     this.findAllPostagens()
-    window.scroll(0,0)
+
+
+    let item:string = localStorage.getItem('delOk')
+    if(item == "true"){
+      this.alerta = true
+      localStorage.clear()
+
+      setTimeout(()=>{
+
+        location.assign('/feed')
+      }, 5000)
+
+    }
   }
 
 findAllPostagens(){
